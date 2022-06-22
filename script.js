@@ -27,20 +27,17 @@ function calcular(){
     resultado.innerHTML += `<p><img src='imagens/refri.png' class='imageRefri'>${Math.ceil(quantidadeTotalDeBebidas/2000)} garrafas 2l de bebidas (refrigerante, suco...)</p>`
 
     let mediaCarne = (quantidadeTotalDeCarne/1000) * 45;
-    let mediaCerveja = (quantidadeTotalDeCerveja/500) * 5.45; /*CORRIGIR VALORES*/ 
+    let mediaCerveja = (quantidadeTotalDeCerveja/500) * 5.45; 
     let mediaBebidas = (quantidadeTotalDeBebidas/1000) * 4.50;
     let valorChurrasco = mediaCarne + mediaCerveja + mediaBebidas;
     resultado.innerHTML += `<p id='mediaGasto'>Média de gasto: R$${valorChurrasco.toFixed(2)}<p/>`;
-    // += - para que um innerHTML não substitua o anterior
     
 
-    // let todosValores = adultos.value; criancas.value; duracao.value;
-    // if(todosValores = " "){
-    //    window.alert("j");
-    // }else{
-    //     window.alert("q")
-    // }
-}  
+    if(adultos < 1 || criancas < 1 || duracao < 1){
+        window.alert("Preencha a área vazia")
+        resultado.innerHTML = "";
+    }
+}
 
 function carnePP(duracao){
     if(duracao >= 6){
@@ -68,6 +65,9 @@ function bebidasPP(duracao){
         return 1000;
     }
 }    
+
+
+
 
 
 
