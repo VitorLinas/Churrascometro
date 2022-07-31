@@ -193,3 +193,40 @@ hr{
     }
 }
 
+
+
+
+ @media(max-height: 800px) and (min-width: 500px){ 
+    *{
+        overflow-y: auto;
+    }
+
+    ::-webkit-scrollbar{
+        background-color: rgb(94, 58, 59)
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: wheat;
+    }
+ 
+   .imageCarne{
+    margin-left: 10px;
+   }
+
+   .imageCerveja{
+    margin-left: 15px;
+    margin-top: 0px;
+   }
+
+   .imageRefri{
+    margin-left: 7px;
+    margin-top: 0px;
+    width: 43px;
+    height: 37px;
+   }
+
+   #mediaGasto{
+    margin-left: 20px;
+   }
+} 
+
